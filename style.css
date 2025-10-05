@@ -1,0 +1,13 @@
+:root{
+    font-family: "poppins", sans-serif;
+    
+}
+
+.aktif{
+    display: block;
+}
+
+.tutup{
+    display: none;
+}
+

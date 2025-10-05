@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Warisan Nusatara</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body
+    class=" min-w-full min-h-screen flex flex-col justify-center items-center gap-6 bg-gradient-to-b from-orange-200 via-orange-100 to-orange-50 ">
+
+    <main id="gerbang" class="flex flex-col gap-6 justify-center items-center min-w-full min-h-7xl p-6">
+        <div class="gerbang flex flex-col gap-6  justify-center items-center min-w-full min-h-7xl w-[60vw]">
+            <h1 class="text-orange-900 font-bold text-left text-4xl">Selamat Datang di Quiz Warisan Nusantara</h1>
+            <p class="font-medium text-lg  text-justify">Pada bagian ini kamu bisa menguji pengetahuan mu
+                tentang budaya Indonesia. Mari #LestarikanBudayaDiEraDigital dengan mengikuti kuis ini!
+            </p>
+            <p class="font-medium text-lg  text-justify -mt-5">Setelah mengerjakan Quiz, kamu bisa mendapatkan
+                <span class="text-orange-900 font-bold">e-sertifikat</span> lohh!
+            </p>
+
+            <button id="mulai" class="p-3 rounded-3xl h-13 text-center cursor-pointer w-30 font-bold border-2
+            hover:text-white hover:bg-black transition-all duration-<0.2>">Mulai Quiz</button>
+        </div>
+    </main>
+
+    <form name="submit-to-google-sheet" method="post">
+
+        <section id="Quiz"
+            class="tutup flex flex-col gap-6 justify-center items-center min-w-full min-h-7xl p-6 min-w-full  ">
+            <div id="container"
+                class="flex flex-col gap-6 justify-center items-start w-auto border-2 p-6 rounded-3xl bg-white/30 backdrop-blur-lg border border-white/40">
+                <h1 class="text-orange-900 font-bold text-left text-xl">Silahkan isi identitas anda</h1>
+
+                <input class="border-2 rounded-3xl p-3" id="email" name="Email" type="email" placeholder="Email"
+                    required>
+                <input class="border-2 rounded-3xl p-3" id="nama" name="Nama" type="text" placeholder="Name" required>
+                <button id="mulaiSoal" class="p-3 rounded-3xl h-13 text-center cursor-pointer w-30 font-bold border-2 text-sm h-6
+            hover:text-white hover:bg-black transition-all duration-<0.2">Selanjutnya</button>
+            </div>
+        </section>
+        <section id="soal" class="tutup p-10 flex flex-col gap-6 justify-center items-center min-w-full min-h-7xl">
+            <div
+                class="flex flex-col gap-6 justify-center items-center w-auto border-2 p-6 rounded-3xl bg-white/30 backdrop-blur-lg border border-white/40">
+
+                <div>
+                    <p class="font-semibold mb-1">1. Suku Aceh dikenal memiliki hukum adat yang menjadi pedoman tata
+                        sosial
+                        dan budaya. Apa nama hukum adat tersebut?</p>
+                    <label class="block"><input type="radio" name="q1" value="A" class="mr-2">A. Dalihan Na Tolu</label>
+                    <label class="block"><input type="radio" name="q1" value="B" class="mr-2">B. Hukum Adat Aceh</label>
+                    <label class="block"><input type="radio" name="q1" value="C" class="mr-2">C. Tri Hita Karana</label>
+                    <label class="block"><input type="radio" name="q1" value="D" class="mr-2">D. Pancasila</label>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-1">2. Dalam filosofi hidup sehari-hari, masyarakat Bali menjunjung tinggi
+                        prinsip yang disebut:</p>
+                    <label class="block"><input type="radio" name="q2" value="A" class="mr-2">A. Dalihan Na Tolu</label>
+                    <label class="block"><input type="radio" name="q2" value="B" class="mr-2">B. Tri Hita Karana</label>
+                    <label class="block"><input type="radio" name="q2" value="C" class="mr-2">C. Sila Ketuhanan</label>
+                    <label class="block"><input type="radio" name="q2" value="D" class="mr-2">D. Karapan Sapi</label>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-1">3. Tradisi pacuan sapi yang menjadi ikon khas Pulau Madura dikenal
+                        dengan
+                        nama:</p>
+                    <label class="block"><input type="radio" name="q3" value="A" class="mr-2">A. Karapan Sapi</label>
+                    <label class="block"><input type="radio" name="q3" value="B" class="mr-2">B. Tari Saman</label>
+                    <label class="block"><input type="radio" name="q3" value="C" class="mr-2">C. Tari Barong</label>
+                    <label class="block"><input type="radio" name="q3" value="D" class="mr-2">D. Gamelan</label>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-1">4. Suku Batak memiliki sistem kekerabatan unik yang disebut:</p>
+                    <label class="block"><input type="radio" name="q4" value="A" class="mr-2">A. Hukum Adat Aceh</label>
+                    <label class="block"><input type="radio" name="q4" value="B" class="mr-2">B. Tri Hita Karana</label>
+                    <label class="block"><input type="radio" name="q4" value="C" class="mr-2">C. Dalihan Na Tolu</label>
+                    <label class="block"><input type="radio" name="q4" value="D" class="mr-2">D. Keraton</label>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-1">5. Suku Jawa dikenal dengan kesenian tradisionalnya. Mana di bawah ini
+                        bukan kesenian khas Jawa?</p>
+                    <label class="block"><input type="radio" name="q5" value="A" class="mr-2">A. Wayang Kulit</label>
+                    <label class="block"><input type="radio" name="q5" value="B" class="mr-2">B. Batik</label>
+                    <label class="block"><input type="radio" name="q5" value="C" class="mr-2">C. Tari Saman</label>
+                    <label class="block"><input type="radio" name="q5" value="D" class="mr-2">D. Gamelan</label>
+                </div>
+
+            </div>
+
+            <button type="submit" id="selesai" class="tutup p-3 rounded-3xl h-13 text-center cursor-pointer w-30 font-bold border-2
+            hover:text-white hover:bg-black transition-all duration-<0.2>">Kirim</button>
+
+        </section>
+    </form>
+
+
+    <section id="akhir" class=" tutup flex flex-col gap-6 justify-center items-center min-w-full min-h-7xl p-6  bg-black/30 backdrop-blur-lg z-10 fixed top-0 left-0 w-full h-full ">
+        <div id="hasil" class=" flex flex-col gap-6 justify-center items-center min-w-full min-h-7xl p-6 min-w-full  ">
+            <div
+                class="flex flex-col gap-6 justify-center items-center w-auto border-2 p-6 rounded-3xl bg-white backdrop-blur-lg border border-white/40">
+                <h1 class="text-orange-900 font-bold text-left text-2xl">Terima Kasih Telah Mengikuti Quiz Ini!</h1>
+                <p class="font-medium text-lg  text-justify">Silahkan cek email untuk melihat e-sertifikat anda.
+                </p>
+                <p class="font-medium text-lg  text-justify">Jangan lupa untuk terus melestarikan budaya Indonesia ya!
+                </p>
+                <div id="score" class="flex flex-row gap-6 justify-center items-center">
+                    <button id="back" class="p-3 rounded-3xl text-sm text-center cursor-pointer w-50 font-bold border-2
+                    hover:text-white hover:bg-black transition-all duration-<0.2>">Kembali ke Beranda</button>
+                    <button id="again" class="p-3 rounded-3xl text-sm text-center cursor-pointer w-30 font-bold border-2
+                    hover:text-white hover:bg-black transition-all duration-<0.2>">Kirim lagi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
