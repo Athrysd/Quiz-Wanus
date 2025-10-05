@@ -23,8 +23,6 @@ soal.addEventListener("click", function (e) {
         Soal.classList.add("aktif");
         kirim.classList.add("aktif")
     }
-    formEmail.value = ""
-    formName.value  = ""
 });
 
 const kirim = document.getElementById('selesai')
@@ -63,4 +61,5 @@ kirimLagi.addEventListener("click", function () {
     notif.classList.add("tutup")
     Soal.classList.remove("aktif")
     Soal.classList.add("tutup")
+
 })
